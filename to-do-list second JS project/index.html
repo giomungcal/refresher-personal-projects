@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <script src="https://cdn.tailwindcss.com/3.4.5"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAA4f8AAAAAAAy57QD1/f8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAERERERERERERERERERERERERERERERERERIiEREiIREREgAhEgAhERESAAIgACEREREgAAACERERESIAACIRERESAAAAACERESAzMwAAAhEREiIzACIhERERESMCERERERERIAIRERERERESIRERERERERERERERERERERERERH//wAA//8AAP//AADjxwAA4YcAAOAHAADwDwAA8A8AAOAHAADAAwAA4AcAAPw/AAD8PwAA/n8AAP//AAD//wAA"
+      rel="icon"
+      type="image/x-icon"
+    />
+
+    <style>
+      body {
+        background-color: #232323;
+      }
+
+      .lato-regular {
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="text-white lato-regular font w-[450px] h-[670px] bg-black mx-auto mt-24 rounded-xl p-10"
+    >
+      <header class="flex justify-between items-center mb-6">
+        <div class="title-wrapper">
+          <h1 class="text-4xl font-bold">To-Do-List</h1>
+          <h2 class="text-m italic">by gio mungcal🌟</h2>
+        </div>
+        <button
+          class="add-btn w-[50px] h-[50px] bg-[#454545] rounded-full hover:bg-gray-600"
+        >
+          +
+        </button>
+      </header>
+      <div class="task-container">
+        <div
+          class="task-wrapper hidden flex bg-[#3A3A3A] w-full h-[50px] items-center rounded-lg mb-2"
+        >
+          <input class="checkbox-btn mx-4" type="checkbox" />
+
+          <h2 class="task-field text-sm .lato-regular">
+            Buy groceries + pass by Tom's
+          </h2>
+          <button
+            class="edit-btn ml-auto mr-2 w-[20px] h-[20px] flex justify-center items-center"
+          >
+            <img class="edit-img" src="./images/edit.svg" alt="" />
+          </button>
+          <button
+            class="delete-btn mr-2 w-[20px] h-[20px] flex justify-center items-center"
+          >
+            <img class="delete-img" src="./images/delete.svg" alt="" />
+          </button>
+        </div>
+      </div>
+
+      <dialog
+        class="addtask-modal mx-auto bg-[#3A3A3A] w-[300px] rounded-lg p-4"
+      >
+        <div class="flex justify-between items-start">
+          <h3 class="text-white text-2xl mb-4">Add Task</h3>
+          <button class="addcancel-btn text-gray-400">X</button>
+        </div>
+        <form class="addtask-form">
+          <input
+            placeholder="Enter task here"
+            type="text"
+            class="addtask-input bg-gray-900 text-white rounded px-3 py-2 placeholder:text-gray-500 w-full"
+          />
+        </form>
+      </dialog>
+      <dialog
+        class="edittask-modal mx-auto bg-[#3A3A3A] w-[300px] rounded-lg p-4"
+      >
+        <div class="flex justify-between items-start">
+          <h3 class="text-white text-2xl mb-4">Edit Task</h3>
+          <button class="editcancel-btn text-gray-400">X</button>
+        </div>
+        <form class="edittask-form">
+          <input
+            placeholder="Edit task here"
+            type="text"
+            class="edittask-input bg-gray-900 text-white rounded px-3 py-2 placeholder:text-gray-500 w-full"
+          />
+        </form>
+      </dialog>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

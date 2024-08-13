@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculater!!</title>
+    <script src="https://cdn.tailwindcss.com/3.4.5"></script>
+
+    <style>
+      .numpad-btn {
+        background-color: #706d6d;
+        border-radius: 5%;
+        color: white;
+        font-size: xx-large;
+      }
+
+      .numpad-btn:hover {
+        background-color: #6a6666;
+      }
+
+      .numpad-btn:click {
+        background-color: #565454;
+      }
+
+      .oper-style {
+        background-color: #fbd291;
+        border-radius: 5%;
+        color: rgb(42, 40, 40);
+        font-size: x-large;
+        font-weight: bold;
+      }
+
+      .oper-style:hover {
+        background-color: #f9c97c;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="calculator w-[450px] h-[670px] bg-[#535353] mx-auto mt-24 rounded-xl p-6"
+    >
+      <div
+        class="results-wrapper flex flex-col justify-between w-full h-[160px] bg-[#313131] rounded-xl mb-6 p-4"
+      >
+        <h2
+          class="calculation-text content-end text-white text-xl break-words w-full text-right"
+        ></h2>
+        <h1
+          class="results content-end text-white text-5xl break-words w-full text-right"
+        ></h1>
+      </div>
+      <div class="keypad-wrapper flex">
+        <div class="numpad grid grid-cols-3 w-[75%] h-[434px] gap-3">
+          <button type="button" class="numpad-btn numbers num7">7</button>
+          <button type="button" class="numpad-btn numbers num8">8</button>
+          <button type="button" class="numpad-btn numbers num9">9</button>
+          <button type="button" class="numpad-btn numbers num4">4</button>
+          <button type="button" class="numpad-btn numbers num5">5</button>
+          <button type="button" class="numpad-btn numbers num6">6</button>
+          <button type="button" class="numpad-btn numbers num1">1</button>
+          <button type="button" class="numpad-btn numbers num2">2</button>
+          <button type="button" class="numpad-btn numbers num3">3</button>
+          <button type="button" class="numpad-btn clear-btn">C</button>
+          <button type="button" class="numpad-btn numbers num0">0</button>
+          <button type="button" class="numpad-btn backspace-btn"><</button>
+        </div>
+        <div class="operators-wrapper w-[25%] grid ml-4 gap-3">
+          <button type="button" class="oper-style operators div">/</button>
+          <button type="button" class="oper-style operators mul">*</button>
+          <button type="button" class="oper-style operators sub">-</button>
+          <button type="button" class="oper-style operators add">+</button>
+          <button type="button" class="oper-style equal bg-[#FFBF75]">=</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
