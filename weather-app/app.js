@@ -15,7 +15,7 @@ async function fetchWeatherData() {
   }
 }
 
-console.log("New changes in weather app within the new git branch");
+console.log("New changes in weather app within the newest git branch");
 
 // Fetch data once all HTML elements are loaded
 document.addEventListener("DOMContentLoaded", () => {
