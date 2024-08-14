@@ -3,9 +3,108 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <!-- <link href="./output.css" rel="stylesheet" /> -->
+    <script src="https://cdn.tailwindcss.com/3.4.5"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Slackey&display=swap"
+      rel="stylesheet"
+    />
+    <title>weather app by gio</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #e4c169;
+      }
+
+      #app-container {
+        background-color: #60ac70;
+        height: 70vh; /* 70% of the viewport height */
+        width: 80vw; /* 80% of the viewport width */
+        max-width: 450px; /* Optional: cap the maximum width */
+        max-height: 670px; /* Optional: cap the maximum height */
+        border-radius: 20px;
+        border-color: #313f27;
+        border-width: 5px;
+        padding: 25px;
+      }
+
+      .slackey-regular {
+        font-family: "Slackey", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+    </style>
   </head>
   <body>
+    <section
+      id="app-container"
+      class="flex flex-col items-center overflow-visible"
+    >
+      <form id="search-bar-form" class="relative w-[100%] flex items-center">
+        <img class="absolute ml-2" src="./images/searchbtn.png" alt="" />
+        <input
+          placeholder=""
+          type="text"
+          id="search-bar"
+          class="w-[100%] h-[35px] bg-[#FFF0CA] rounded-full pl-9"
+        />
+      </form>
+      <img
+        style="max-width: none"
+        class="mt-8 h-auto w-[550px]"
+        src="./images/weatherapplogo.png"
+      />
+      <h2
+        id="degrees-location-title"
+        class="slackey-regular text-4xl text-[#E0F9CE] -mt-4 whitespace-nowrap"
+      >
+        . . . . . . . .
+      </h2>
+      <div
+        id="weather-data-container"
+        class="grid grid-cols-2 grid-rows-3 gap-4"
+      >
+        <img
+          src="./images/WeatherAppGuy.png"
+          alt=""
+          class="relative row-span-3 col-span-1 h-[410px] max-w-[none] left-[-46px] bottom-[-7px]"
+        />
+        <div>
+          <img
+            class="absolute w-[280px]"
+            src=" ./images/weatherballoon.png"
+            alt=""
+          />
+          <p
+            id="weather-balloon"
+            class="absolute slackey-regular text-sm max-w-[228px] mt-12 ml-8"
+          >
+            hi, weather report!
+            <span id="weather-value" class="text-[#D85488]">.zz.</span> in
+            <span id="weather-location" class="text-[#7E54D0]">.z.zz.</span>
+            with
+            <span id="humidity-value" class="text-[#6664BC]">.z% humidity</span>
+            and a
+            <span id="wind-value" class="text-[#6664BC]"
+              >wind speed of zz.. km/h</span
+            >!
+          </p>
+        </div>
+        <img
+          class="row-span-2 w-[163px] relative bottom-[-6px] mt-auto ml-auto right-[-15px]"
+          src="./images/WeatherAppPlant.png"
+          alt=""
+        />
+      </div>
+    </section>
     <script src="./app.js"></script>
   </body>
 </html>
