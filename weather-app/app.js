@@ -15,7 +15,10 @@ async function fetchWeatherData() {
   }
 }
 
-console.log("New changes in weather app within the newest git branch");
+let date = new Date();
+const dateMoment = moment(date).format("LL");
+
+console.log("Test Date: ", dateMoment);
 
 // Fetch data once all HTML elements are loaded
 document.addEventListener("DOMContentLoaded", () => {
