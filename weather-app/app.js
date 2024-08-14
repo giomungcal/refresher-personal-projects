@@ -2,6 +2,10 @@ const api_key = "87c1b48fdbde6f40086d401388ea700a";
 const city = "Thailand";
 const apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`;
 
+// moment.js package
+let moment = require("moment");
+moment().format();
+
 async function fetchWeatherData() {
   try {
     const response = await fetch(apiUrl);
