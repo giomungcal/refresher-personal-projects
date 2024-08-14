@@ -6,6 +6,7 @@ const api_key = "87c1b48fdbde6f40086d401388ea700a";
 const degreesLocationValue = document.getElementById("degrees-location-title");
 
 const weatherBalloon = document.getElementById("weather-balloon");
+const weatherBalloonError = document.getElementById("weather-balloon-error");
 const weatherValue = document.getElementById("weather-value");
 const weatherLocation = document.getElementById("weather-location");
 const humidityValue = document.getElementById("humidity-value");
@@ -26,7 +27,11 @@ async function fetchWeatherData(city) {
 
     // Working code starts here
     const currentTemp = (weatherData.main.temp_max - 273.15).toFixed(2);
-    degreesLocationValue.textContent = `${currentTemp}° ${city.toLowerCase()}`;
+    degreesLocationValue.textContent = `${currentTemp}°c ${city.toLowerCase()}`;
+
+    // Remove error message
+    weatherBalloon.classList.remove("hidden");
+    weatherBalloonError.classList.add("hidden");
 
     weatherValue.textContent = weatherData.weather[0].description;
     weatherLocation.textContent = city.toLowerCase();
@@ -35,7 +40,8 @@ async function fetchWeatherData(city) {
   } catch (error) {
     console.log(`There is a fetch error: ${error}. City might be invalid.`);
     degreesLocationValue.textContent = `error 404`;
-    weatherBalloon.textContent = `..zzzttt . . . bzzt   cann---ot find.. locati___ion....... ............shutting down.....`;
+    weatherBalloon.classList.add("hidden");
+    weatherBalloonError.classList.remove("hidden");
   }
 }
 

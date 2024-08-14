@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAD+/v8AAAAAADJFeAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAESIRERERERESACEiERERESAAAgAhIhERIAACAAIAIREgAAAAAAACERIAAiIiAAIRESAAAAAAIhESACAAACAAISAAAAAAAAACIAAAAAAAAAIgACAAAAAiIRIiIAAAAAIREREgAAIAAhERESAAAgACEREREgAhIiERERERIhERERHP/wAAhP8AAABPAAAABwAAAAMAAIADAADAAwAAgAEAAAAAAAAAAAAAAAEAAIADAADwAwAA8AMAAPhHAAD8/wAA"
+      rel="icon"
+      type="image/x-icon"
+    />
     <!-- <link href="./output.css" rel="stylesheet" /> -->
     <script src="https://cdn.tailwindcss.com/3.4.5"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -96,6 +101,15 @@
             <span id="wind-value" class="text-[#6664BC]"
               >wind speed of zz.. km/h</span
             >!
+          </p>
+          <p
+            id="weather-balloon-error"
+            class="absolute hidden slackey-regular text-sm max-w-[228px] mt-12 ml-8"
+          >
+            Looks like there has been a
+            <span class="text-[#D85488]">storm</span> and our satellites have
+            been affected!
+            <span class="text-[#6664BC]">Stay tuned for updates!</span>
           </p>
         </div>
         <img
